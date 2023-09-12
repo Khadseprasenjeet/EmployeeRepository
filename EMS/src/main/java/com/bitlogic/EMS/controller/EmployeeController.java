@@ -1,5 +1,7 @@
 package com.bitlogic.EMS.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -29,4 +31,13 @@ public class EmployeeController {
 		Employee e1=es.saveData(e);
 		return new ResponseEntity<Employee>(e1, HttpStatus.OK);
 	}
+	
+	@GetMapping("/get")
+	public ResponseEntity<List<Employee>> getAllData()
+	{
+	List<Employee> empl=	es.getAllData();
+		
+		return new ResponseEntity<List<Employee>>(empl, HttpStatus.OK);
+	}
+	
 }
