@@ -29,4 +29,11 @@ public class EmployeeServiceImpl implements EmployeeService{
 		
 		return er.findAll();
 	}
+
+	@Override
+	public void deleteData(int id) 
+	{
+		er.deleteById(id);
+		
+	}
 }

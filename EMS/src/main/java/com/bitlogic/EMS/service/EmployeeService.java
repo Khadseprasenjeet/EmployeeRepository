@@ -10,4 +10,6 @@ public interface EmployeeService {
 
 	public List<Employee> getAllData();
 
+	public void deleteData(int id);
+
 }
